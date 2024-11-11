@@ -98,7 +98,7 @@ def find_union(set1, set2):
     Return:
     - The union of the two sets.
     """
-    return 
+    return set1|set2
 
 
 def find_difference(set1, set2):
@@ -133,8 +133,11 @@ def change_bob_grade(student_grades):
     
     Return:
     - The updated dictionary with Bob’s grade changed.
-    """
-    return student_grades['Bob'][95]
+    """  
+    del student_grades['Bob']  
+    update_student = {'Bob': 95}
+    student_grades.update(update_student)
+    return student_grades
 
 
 def delete_charlie(student_grades):
