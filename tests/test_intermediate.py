@@ -30,7 +30,7 @@ class TestIntermediateFunctions(unittest.TestCase):
         self.assertEqual(reverse_list([1, 2, 3]), [3, 2, 1])
 
     def test_create_new_tuple(self):
-        self.assertEqual(create_new_tuple((5, 10, 15, 20)), (5, 10))
+        self.assertEqual(create_new_tuple((5, 10, 15, 20), (5, 10)))
 
     def test_check_if_value_exists(self):
         self.assertTrue(check_if_value_exists((5, 10, 15, 20), 15))
