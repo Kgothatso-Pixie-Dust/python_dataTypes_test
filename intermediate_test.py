@@ -70,12 +70,10 @@ def check_if_value_exists(t, value):
     Return:
     - True if the value exists, otherwise False.
     """
-    value = 15
     for i in t:
-        if value in i:
+        if i == value:
             return True
-        else:
-            return False
+        
 
 
 def find_intersection(set1, set2):
