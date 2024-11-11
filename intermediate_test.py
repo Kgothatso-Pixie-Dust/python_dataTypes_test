@@ -70,10 +70,10 @@ def check_if_value_exists(t, value):
     Return:
     - True if the value exists, otherwise False.
     """
-    t = (5, 10, 15, 20)
+    value = 15
     for i in t:
-        if 15 in i:
-            return i
+        if value in i:
+            return True
         else:
             return False
 
@@ -86,8 +86,8 @@ def find_intersection(set1, set2):
     Return:
     - The intersection of the two sets.
     """
-    if set1 in set2:
-        return set1
+
+    return set1 & set2
 
 
 def find_union(set1, set2):
@@ -98,7 +98,7 @@ def find_union(set1, set2):
     Return:
     - The union of the two sets.
     """
-    return set1.add(set2)
+    return 
 
 
 def find_difference(set1, set2):
@@ -109,10 +109,7 @@ def find_difference(set1, set2):
     Return:
     - The difference between the two sets.
     """
-    for i in set1:
-        if i not in set2:
-            return i
-        return {i}
+    return  set1 - set2
 
 
 def add_student(student_grades):
@@ -123,8 +120,9 @@ def add_student(student_grades):
     Return:
     - The updated dictionary with the new student.
     """
-    student_grades = {'Alice': 85}
-    return student_grades.update('David', 92)
+    update_student = {'David': 92}
+    student_grades.update(update_student)
+    return student_grades
 
 
 
@@ -136,8 +134,7 @@ def change_bob_grade(student_grades):
     Return:
     - The updated dictionary with Bob’s grade changed.
     """
-    student_grades = {'Alice': 85}
-    return student_grades.update(['Bob', 95])
+    return student_grades['Bob'][95]
 
 
 def delete_charlie(student_grades):
@@ -148,9 +145,8 @@ def delete_charlie(student_grades):
     Return:
     - The updated dictionary with Charlie removed.
     """
-    student_grades = {'Alice': 85}
-    
-    return student_grades.update()
+    del student_grades['Charlie']
+    return student_grades
 
 
 def retrieve_alice_grade(student_grades):
