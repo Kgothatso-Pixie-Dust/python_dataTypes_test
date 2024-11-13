@@ -6,13 +6,13 @@ def create_squares_of_evens():
     Return:
     - The list of squares of even numbers.
     """
-    for i in range(1,21):
-        if i % 2 ==0:
-            for j in range(1, i+1):
-                for p in range(j+1, 1):
-                    print(p, end=' ')
-            print()
-    pass
+    squared = []
+    for i in range(1,20):
+        if i % 2 == 0:
+            p = i ** 2
+            squared.append(p)
+    return squared[:5]
+ 
 
 
 def convert_to_dict(students):
@@ -23,8 +23,8 @@ def convert_to_dict(students):
     Return:
     - The dictionary created from the list of students.
     """
-    for key, value in enumerate(students):
-        return dict()  
+    students_dict = dict(students)
+    return students_dict
 
 
 def access_value_x(nested):
